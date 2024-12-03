@@ -10,9 +10,12 @@ BQ25887::BQ25887(){
 	
 }
 
-bool BQ25887::begin(){
+bool BQ25887::begin(bool wireBegin){
 	
-	Wire.begin();
+	if(wireBegin == true){
+		Wire.begin();
+	}
+	
 	
 	//check PN & DEV if no match return false
 	if(this->readPartInfoReg() != BQ25887_PARTINFO){

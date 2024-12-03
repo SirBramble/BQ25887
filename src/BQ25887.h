@@ -90,7 +90,7 @@ class BQ25887{
 	
 	//public methods
 	BQ25887();
-	bool begin();
+	bool begin(bool wireBegin = true);
 	
 	uint8_t readCellVoltageLimitReg();
 	float getCellVoltageLimit();
